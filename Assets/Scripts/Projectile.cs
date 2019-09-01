@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
 
     Rigidbody2D rigidbody2d;
-
+    
 
     // Start is called before the first frame update
     void Awake()
@@ -27,6 +27,7 @@ public class Projectile : MonoBehaviour
         rigidbody2d.AddForce(direction * force);
     }
 
+    public AudioClip fixAudio;
     private void OnCollisionEnter2D(Collision2D other)
     {
         EnemyController e = other.collider.GetComponent<EnemyController>();
